@@ -70,6 +70,13 @@ if(corsList.origin.length === 1){
     }
 }
 
+app.get('/healthcheck', (req, res, next) => {
+	return res.status(200).json({
+		code: 200,
+		message: "HTTP OK - Hello :D"
+	});
+});
+
 app.all('*', function(req, res, next) {
     let origin;
 
