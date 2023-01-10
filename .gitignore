@@ -1,7 +1,3 @@
-# mapi configs
-configs/
-configs/**
-
 files/
 files/**
 
@@ -112,5 +108,3 @@ dist
 .tern-port
 
 
-# configs
-configs/

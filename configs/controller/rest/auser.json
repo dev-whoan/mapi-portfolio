@@ -1,0 +1,12 @@
+{
+    "id": "auser",
+    "type": "api",
+    "auth": "yes",
+    "proxy-list": ["start", "end"],
+    "proxy-order": 1,
+    "log": "debug",
+    "uri": "/api",
+    "paging-query": "page",
+    "model": "USER",
+    "dml": ["select", "insert", "update", "delete"]
+}

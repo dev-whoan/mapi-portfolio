@@ -1,0 +1,52 @@
+{
+    "cors": {
+        "default": "http://localhost:3000",
+        "origin": [ "*" ],
+        "methods": "GET,PUT,POST,DELETE,HEAD,OPTIONS",
+        "allow-headers": "Authorization, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin"
+    },
+    "restapi":{
+        "use": "yes",
+        "base-uri": "/",
+        "count": 50
+    },
+    "file-transfer":{
+        "use": "no",
+        "base-uri": "/upload",
+        "read-uri": "file",
+        "base-directory": "/files",
+        "count": 10,
+        "type": "hostpath",
+        "table": "MAPI_FILE",
+        "columns": {
+            "parent-path": "parent",
+            "file-name": "file",
+            "timestamp": "timestamp",
+            "owner": "owner" 
+        }
+    },
+    "database": {
+        "type": "mysql",
+        "id": "DB_USER",
+        "pw": "DB_PW",
+        "host": "DB_HOST",
+        "port": "DB_PORT",
+        "scheme": "DB_SCHEME|DB_COLLECTION"
+    },
+    "jwt": {
+        "use": "yes",
+        "generate-uri": "/auth/do",
+        "verify-uri": "/auth/verify",
+        "lifetime": "600",
+        "secret": "JWT_SECRET",
+        "auth-table": "JWT_AUTH",
+        "auth-columns": ["name", "password"],
+        "alg": "HS256",
+        "columns": ["SEQ", "name", "email"],
+        "keys": {
+            "SEQ": "index",
+            "name": "nickname",
+            "email": "contact"
+        }
+    }
+}

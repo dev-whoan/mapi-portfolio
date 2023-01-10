@@ -1,0 +1,17 @@
+{
+    "id": "board",
+    "type": "file-transfer",
+    "auth": "no",
+    "log": "debug",
+    "directory": "/board",
+    "extension": [
+        "jpg", "jpeg", "png", "gif"
+    ],
+    "custom-database": {
+        "model": "MAPI_BOARD",
+        "parent-path": "parent",
+        "file-name": "file",
+        "timestamp": "timestamp",
+        "owner": "owner"    
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "USER",
+    "type": "model",
+    "auth": "no",
+    "proxy-list": [],
+    "log": "true",
+    "columns": {
+        "SEQ": "integer",
+        "NAME": "string",
+        "AGE": "integer",
+	"DESCRIPTION": "string"
+    },
+    "not-null": ["NAME"]
+}
