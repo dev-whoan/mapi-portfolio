@@ -46,4 +46,5 @@ jobs:
           --data healthCheckProtocol=${{ secrets.HEALTH_CHECK_PROTOCOL }} \
           --data healthCheckPort=${{ secrets.HEALTH_CHECK_PORT }} \
           --data projectInfo=${{ secrets.PROJECT_INFO_JSON }} \
-          --data webTitle=${{ secrets.WEB_TITLE }}
+          --data webTitle=${{ secrets.WEB_TITLE }} \
+          --data dbHost=${{ secrets.MAPI_HOST }}
