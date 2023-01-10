@@ -49,6 +49,8 @@ modelConfigReader.printConfigs();
 
 let dba = new DBAccessor();
 
+console.log(process.env, 'process env');
+
 /* Initialize Check */
 let dbaInit = await dba.initTest();
 if(dbaInit != 0){
@@ -147,9 +149,6 @@ if(baseConfigReader.getConfig()[API_TYPE.JWT].use && baseConfigReader.getConfig(
     jwtHttpRequestHandler.setRouter(jwtObject);
 }
 /* JWT */
-
-
-console.log(process.env, 'process env');
 
 app.all('*', (req, res) => {
     const _cip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
