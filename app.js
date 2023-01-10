@@ -148,6 +148,9 @@ if(baseConfigReader.getConfig()[API_TYPE.JWT].use && baseConfigReader.getConfig(
 }
 /* JWT */
 
+
+console.log(process.env, 'process env');
+
 app.all('*', (req, res) => {
     const _cip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     console.log(`${_cip} requested unkonwn page [${req.url}]`);
