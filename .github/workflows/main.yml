@@ -26,12 +26,12 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:latest
-          secrets: |
-              "mapi_host=${{ secrets.MAPI_HOST }}"
-              "mapi_port=${{ secrets.MAPI_PORT }}"
-              "mapi_user=${{ secrets.MAPI_USER }}"
-              "mapi_password=${{ secrets.MAPI_PASSWORD }}"
-              "mapi_scheme=${{ secrets.MAPI_SCHEME }}"
+        env: |
+            "mapi_host=${{ secrets.MAPI_HOST }}"
+            "mapi_port=${{ secrets.MAPI_PORT }}"
+            "mapi_user=${{ secrets.MAPI_USER }}"
+            "mapi_password=${{ secrets.MAPI_PASSWORD }}"
+            "mapi_scheme=${{ secrets.MAPI_SCHEME }}"
       -
         name: Send Hook To NodeJS Server
         run: |
