@@ -31,6 +31,7 @@ export default class MySqlAccessor{
             const result = await conn.query("SELECT 1");
             console.log("MySQL Initialize Test Passed !");
         } catch (e) {
+            console.log(process.env);
             console.log(`Fail to connect database:: [${dbInfo.user}]@${dbInfo.host}:${dbInfo.port}`);
             console.log(e.message);
             if(e.message.toString().includes("retrieve connection from pool timeout after")){
