@@ -1,4 +1,4 @@
-name: build and push
+name: send hook
 on:
   push:
     branches: [ main ]
